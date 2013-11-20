@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Javascript Bare</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+
+		var secret = "hello";
+		var counter = 0
+
+		var password = function() {
+			if(counter < 3) {
+				var input = prompt("What's the password?");
+					if(input == secret){
+						alert("Come on in!");
+					} 
+					else {
+						alert("Try again!!!");
+						counter = counter + 1;
+						password();
+					}
+			}
+			else {
+				alert("Sorry, you've tried too many times!");
+			}
+		};
+		
+		password();		
+		
+
+	</script>
+
+</body>
+</html>
